@@ -1,6 +1,6 @@
 {
   "name": "one-separator-decimal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Javascript String handler to one separator decimal (default is dot '.')",
   "main": "lib/index.js",
   "scripts": {
