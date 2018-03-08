@@ -25,8 +25,7 @@
 const oneSeparatorDecimal = require('../lib/index')
 const assert = require('assert');
 
-
-describe('one separator decimal', function () {
+describe('one-separator-decimal', function () {
 
     describe('NaN', function () {
         it('should return NaN when the value is `test`', function () {
