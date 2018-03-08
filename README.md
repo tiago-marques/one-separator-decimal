@@ -3,9 +3,8 @@
 
 [![NPM](https://nodei.co/npm/one-separator-decimal.png)](https://nodei.co/npm/one-separator-decimal/)
 
-Javascript String handler to one separator decimal
-
-(default is dot '.')
+Converts input value to a floating-point number with separator decimal passed as paramater, locale is irrelevant. Only the last non-numeric character is considered for the conversion.
+ 
 
 
 ## Install
@@ -17,8 +16,16 @@ Javascript String handler to one separator decimal
 
     ...
 
-    const result = convert('123,456')
+    /**
+    * @license MIT License
+    * @param {String} input
+    * @param {String} [separator='.'] The separator is optional, default value is a dot.
+    *
+    */
+    let result = convert('123,456')
     //result = 123.456
+    result = convert('123,456', ',')
+    //result = 123,456
 ```
 
 # Validations
