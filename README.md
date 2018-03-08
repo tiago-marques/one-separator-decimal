@@ -1,11 +1,14 @@
 # one-separator-decimal
+![travis-ci.org](https://api.travis-ci.org/tiago-marques/one-separator-decimal.svg?branch=master)
+[![NPM](https://nodei.co/npm/one-separator-decimal.png)](https://nodei.co/npm/one-separator-decimal/)
+
 Javascript String handler to one separator decimal
 
 (default is dot '.')
 
 
 ## Install
-    npx install one-separator-decimal
+    npm install one-separator-decimal
 
 ## Usage
 ```javascript
