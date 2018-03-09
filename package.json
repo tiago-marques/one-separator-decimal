@@ -1,7 +1,7 @@
 {
   "name": "one-separator-decimal",
   "version": "0.1.2",
-  "description": "Javascript String handler to one separator decimal (default is dot '.')",
+  "description": "Converts input value to a floating-point number with separator decimal passed as paramater, locale is irrelevant. Only the last non-numeric character is considered for the conversion.",
   "main": "lib/index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha test/index.js"

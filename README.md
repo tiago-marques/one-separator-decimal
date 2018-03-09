@@ -24,8 +24,6 @@ Converts input value to a floating-point number with separator decimal passed as
     */
     let result = convert('123,456')
     //result = 123.456
-    result = convert('123,456', ',')
-    //result = 123,456
 ```
 
 # Validations
