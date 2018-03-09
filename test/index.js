@@ -21,76 +21,76 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-const oneSeparatorDecimal = require('../lib/index')
+"use strict";
+const convert = require('../lib/index')
 const assert = require('assert');
 
 describe('one-separator-decimal', function () {
 
     describe('NaN', function () {
         it('should return NaN when the value is `test`', function () {
-            assert.deepStrictEqual(oneSeparatorDecimal("test"), NaN);
+            assert.deepStrictEqual(convert("test"), NaN);
         });
     });
 
     describe('mixed dots and commas', function () {
         it('should return 1000 when the value is `1,000.00`', function () {
-            assert.equal(oneSeparatorDecimal("1,000.00"), 1000);
+            assert.equal(convert("1,000.00"), 1000);
         });
         it('should return 1000 when the value is `1.000,00`', function () {
-            assert.equal(oneSeparatorDecimal("1.000,00"), 1000);
+            assert.equal(convert("1.000,00"), 1000);
         });
     });
 
     describe('dots', function () {
         it('should return 10 when the value is `10.00`', function () {
-            assert.equal(oneSeparatorDecimal("10.00"), 10);
+            assert.equal(convert("10.00"), 10);
         });
         it('should return 0.1 when the value is `.1000`', function () {
-            assert.equal(oneSeparatorDecimal(".1000"), 0.1);
+            assert.equal(convert(".1000"), 0.1);
         });
         it('should return 1000 when the value is `1000.00`', function () {
-            assert.equal(oneSeparatorDecimal("1000.00"), 1000);
+            assert.equal(convert("1000.00"), 1000);
         });
         it('should return 1000 when the value is `1.000.00`', function () {
-            assert.equal(oneSeparatorDecimal("1.000.00"), 1000);
+            assert.equal(convert("1.000.00"), 1000);
         });
         it('should return 1000 when the value is `1.000.000`', function () {
-            assert.equal(oneSeparatorDecimal("1.000.000"), 1000);
+            assert.equal(convert("1.000.000"), 1000);
         });
         it('should return 1000000 when the value is `1.000.000.00`', function () {
-            assert.equal(oneSeparatorDecimal("1.000.000.00"), 1000000);
+            assert.equal(convert("1.000.000.00"), 1000000);
         });
     });
 
     describe('commas', function () {
         it('should return 10 when the value is `10,00`', function () {
-            assert.equal(oneSeparatorDecimal("10,00"), 10);
+            assert.equal(convert("10,00"), 10);
         });
         it('should return 0.1 when the value is `,1000`', function () {
-            assert.equal(oneSeparatorDecimal(",1000"), 0.1);
+            assert.equal(convert(",1000"), 0.1);
         });
         it('should return 1000 when the value is `1000,00`', function () {
-            assert.equal(oneSeparatorDecimal("1000,00"), 1000);
+            assert.equal(convert("1000,00"), 1000);
         });
 
         it('should return 1000 when the value is `1,000,00`', function () {
-            assert.equal(oneSeparatorDecimal("1,000,00"), 1000);
+            assert.equal(convert("1,000,00"), 1000);
         });
         it('should return 1000 when the value is `1,000,000`', function () {
-            assert.equal(oneSeparatorDecimal("1,000,000"), 1000);
+            assert.equal(convert("1,000,000"), 1000);
         });
         it('should return 1000000 when the value is `1,000,000,00`', function () {
-            assert.equal(oneSeparatorDecimal("1,000,000.00"), 1000000);
+            assert.equal(convert("1,000,000.00"), 1000000);
         });
     });
 
     describe('more than two decimals', function () {
         it('should return 123.45678 when the value is `123,45678`', function () {
-            assert.equal(oneSeparatorDecimal("123,45678"), 123.45678);
+            assert.equal(convert("123,45678"), 123.45678);
         });
         it('should return 123.45678 when the value is `123.45678`', function () {
-            assert.equal(oneSeparatorDecimal("123.45678"), 123.45678);
+            assert.equal(convert("123.45678"), 123.45678);
         });
     });
 });
