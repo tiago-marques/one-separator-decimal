@@ -1,6 +1,7 @@
 # one-separator-decimal
 
 ![travis-ci.org](https://api.travis-ci.org/tiago-marques/one-separator-decimal.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/tiago-marques/one-separator-decimal/badge.svg?branch=master)](https://coveralls.io/github/tiago-marques/one-separator-decimal?branch=master)
 
 [![NPM](https://nodei.co/npm/one-separator-decimal.png)](https://nodei.co/npm/one-separator-decimal/)
 
